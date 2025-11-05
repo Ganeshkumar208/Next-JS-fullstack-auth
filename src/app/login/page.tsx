@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
-import toast from 'react-hot-toast'
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
     const router = useRouter();
@@ -32,7 +32,7 @@ const LoginPage = () => {
     return (
         <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-black'>
             <div className='w-full max-w-md p-8 space-y-6 bg-gray-900 rounded-lg shadow-lg border border-gray-800'>
-                <h1 className='text-3xl font-bold text-center text-white'>{loading ? "Login Here" : ""}</h1>
+                <h1 className='text-3xl font-bold text-center text-white'>{loading ? "Processing Login..." : "Login Here"}</h1>
 
                 <hr className='border-gray-700' />
 
